@@ -1,0 +1,76 @@
+html,body{height: 100%;overflow: hidden;}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px "微软雅黑";}
+a{text-decoration: none;display: block;}
+li{list-style: none;}
+img{display: block;}
+
+/*清除浮动*/
+.cleanfix{*zoom: 1;}
+.cleanfix:after{content: '';display: block;clear: both}
+
+#wrap{
+    width: 100%;
+}
+#header{
+    width: 100%;
+    height: 80px;
+    background-color: skyblue;
+    position: relative;
+}
+#header .headerMain{
+    width: 1100px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: palevioletred;
+}
+#header .headerMain .log{
+    float: left;
+    margin-top: 15px;
+}
+#header .headerMain .nav{
+    float: right;
+    margin-top: 50px;
+}
+#header .headerMain #list .items{
+    float: left;
+    margin-left: 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+#header .headerMain #list .items .up{
+    position: absolute;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+
+}
+#header .headerMain #list .items .down{
+    color: aqua;
+}
+#header .headerMain #list .items:hover .up{
+    width: 100%;
+}
+#header .headerMain #list .items img{
+    /*height: 16px;*/
+    /*width: 18px;*/
+}
+#header .ceil{
+    width: 21px;
+    height: 11px;
+    background-image: url(../img/arrow.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    /*background-color: saddlebrown;*/
+    bottom: -11px;
+}
+#content{
+    width: 100%;
+    height: 520px;
+    background-color: slategray;
+
+}

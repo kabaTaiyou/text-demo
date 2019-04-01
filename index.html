@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pc最终项目</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--最外侧包裹容器-->
+<div id="wrap">
+    <!--t头部区域-->
+    <header id="header">
+        <!--头部真正承接内容区域-->
+        <div class="headerMain">
+            <!--左侧logo区-->
+            <h1 class="log">
+                <a href="javascript:;">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </h1>
+            <!--右侧导航区-->
+            <nav class="nav">
+                <ul id="list">
+
+                    <li class="items"><a href="javascript:;">
+                        <div class="up">
+                            <img src="img/home_gruen.png" alt="" >
+                        </div>
+                        <div class="down">
+                            <img src="img/home.png" alt="" >
+                        </div>
+
+                         </a></li>
+                    <li class="items"><a href="javascript:;"><div class="up">Course</div> <div class="down">Course</div> </a></li>
+                    <li class="items"><a href="javascript:;"><div class="up">Works</div> <div class="down">Works</div> </a></li>
+                    <li class="items"><a href="javascript:;"><div class="up">About</div> <div class="down">About</div> </a></li>
+                    <li class="items"><a href="javascript:;"><div class="up">Team</div> <div class="down">Team</div> </a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="ceil">
+
+    </div>
+    </header>
+    <section id="content">
+
+    </section>
+</div>
+<script type="text/javascript">
+    //获取所有的up
+    var navUp = document.querySelectorAll('#header .headerMain #list .items .up');
+    var items = document.querySelectorAll('#header .headerMain #list .items');
+    var arrow = document.querySelector('#header .ceil');
+    //初始化 元素的位置
+    navUp[0].style.width = '100%'
+    arrow.style.left = items[0].getBoundingClientRect().left+items[0].offsetWidth/2+'px';
+    console.log(navUp[0].offsetLeft)
+
+
+    for (var i = 0; i < items.length; i++) {
+//        var items = items[i];
+        items[i].index = i;
+        items[i].onclick = function () {
+            arrow.style.left = items[this.index].getBoundingClientRect().left+items[this.index].offsetWidth/2+'px';
+            for (var i = 0; i < navUp.length; i++) {
+                navUp[i].style.width = ''
+
+            }
+            navUp[this.index].style.width = '100%'
+        }
+
+
+
+
+//        items.index = i;
+//        items.onclick = function () {
+////            arrow.style.left = items[0].getBoundingClientRect().left+'px';
+////            for (var i = 0; i < navUp.length; i++) {
+////                navUp.style.width = ''
+////
+////            }
+//
+//            navUp[this.index].style.width = '100%'
+//        }
+
+    }
+
+</script>
+</body>
+</html>
