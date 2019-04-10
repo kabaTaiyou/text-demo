@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    *{
+        list-style: none;
+
+    }
+    #wrap{
+        width: 900px;
+        height: 400px;
+        /*background-color: silver;*/
+        margin: 0 auto;
+        position: relative;
+        transform-style: preserve-3d;
+        margin-top: 100px;
+    }
+    #list li{
+        position: absolute;
+        transform:  perspective(300px);
+    }
+    #list li:nth-child(1){
+        width: 900px;
+        height: 400px;
+        background-color: steelblue;
+        animation: lunbo1 3s infinite;
+
+    }
+    #list li:nth-child(2){
+        width: 900px;
+        height: 400px;
+        background-color: sandybrown;
+        animation: lunbo 3s infinite;
+    }
+    #list li:nth-child(3){
+        width: 900px;
+        height: 400px;
+        background-color: darkred;
+    }
+    #list li:nth-child(4){
+        width: 900px;
+        height: 400px;
+        background: salmon;
+    }
+    #list li:nth-child(5){
+        width: 900px;
+        height: 400px;
+        background-color: springgreen;
+        transform: rotateY(10deg) translate(1px);
+    }
+    #btn{
+        height: 100px;
+        width: 100px;
+        background-color: sienna;
+    }
+    @keyframes lunbo {
+        0%{transform: translateZ(-100px) translateX(0px) rotateY(0deg)}
+        50%{transform : translateZ(-200px) translateX(500px) rotateY(-35deg) }
+        100%{transform :translateZ(0px) translateX(0px) rotateY(0deg) ;}
+    }
+    @keyframes lunbo1 {
+        0%{}
+        50%{transform : translateX(-500px) rotateY(35deg) ;}
+        100%{transform :translateZ(-200px) translateX(0px) rotateY(0deg)}
+    }
+</style>
+
+<div id="wrap">
+
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <!--<li>3</li>-->
+        <!--<li>4</li>-->
+        <!--<li>5</li>-->
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var list = document.getElementById('list');
+    var items = document.querySelectorAll('#list li');
+    var btn = document.getElementById('btn');
+
+
+
+    alert('
+    //
+    \\         //
+    \\       //
+    ##DDDDDDDDDDDDDDDDDDDDDD##
+    ## DDDDDDDDDDDDDDDDDDDD ##   ________   ___   ___        ___   ________   ___   ___        ___
+    ## hh                hh ##   |\   __  \ |\  \ |\  \      |\  \ |\   __  \ |\  \ |\  \      |\  \
+    ## hh    //    \\    hh ##   \ \  \|\ /_\ \  \\ \  \     \ \  \\ \  \|\ /_\ \  \\ \  \     \ \  \
+    ## hh   //      \\   hh ##    \ \   __  \\ \  \\ \  \     \ \  \\ \   __  \\ \  \\ \  \     \ \  \
+    ## hh                hh ##     \ \  \|\  \\ \  \\ \  \____ \ \  \\ \  \|\  \\ \  \\ \  \____ \ \  \
+    ## hh      wwww      hh ##      \ \_______\\ \__\\ \_______\\ \__\\ \_______\\ \__\\ \_______\\ \__\
+    ## hh                hh ##       \|_______| \|__| \|_______| \|__| \|_______| \|__| \|_______| \|__|
+    ## MMMMMMMMMMMMMMMMMMMM ##
+    '##MMMMMMMMMMMMMMMMMMMMMM##                             Release 2.6.1. Powered by jinkela-core 2.4.4.
+    +'\/            \/')
+
+
+
+</script>
+
+</body>
+</html>
